@@ -3,7 +3,7 @@
 Makerlabvn_I2C_Motor_Driver myDriver; // Defaule ID = 0. Ex: myDriver <=> myDriver(0)
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial.println("Example Set the ID for MKL-M10 I2C motor control module");
   Serial.println("Please only connect one module at a time");
   Serial.println("ID\tI2C Address");

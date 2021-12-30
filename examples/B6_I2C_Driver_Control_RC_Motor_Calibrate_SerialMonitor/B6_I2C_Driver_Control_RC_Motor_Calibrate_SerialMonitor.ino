@@ -5,7 +5,7 @@
 *         how to disable RC servo S1 (similar to S2) on the module which uses freeS1() function. Note: This function only works with analog RC Servo.
 * How to use:
 *     - After upload code to your Arduino board, open Serial Monitor (on Tools menu).
-*       Choose "Both NL & CR" and "115200 baud"
+*       Choose "Both NL & CR" and "9600 baud"
 *     - To set pulse for S1, example: Pulse Min = 460 (at 0 degree); Pulse Max = 2350 (at 180 degrees)
 *         + Step 1:Setup pulse for 0 degree and 180 degrees
 *             Type number 460 then hit Enter
@@ -26,7 +26,7 @@ unsigned int pulseMax = 2350;
 unsigned int pulseFromSerial = 0;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   // Init Module
   myDriver.begin();
 }

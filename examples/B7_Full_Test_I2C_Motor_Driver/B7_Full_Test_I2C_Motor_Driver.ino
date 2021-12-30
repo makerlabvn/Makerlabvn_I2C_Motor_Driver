@@ -7,9 +7,9 @@ char tempInput = 0;
 void setup()
 {
     // put your setup code here, to run once:
-    Serial.begin(115200);
+    Serial.begin(9600);
     Serial.println("Start Test, input from 1 to 4 (OFF)");
-    Serial.println("Baud 115200, No line ending");
+    Serial.println("Baud 9600, No line ending");
     myDriver.begin();
 }
 
