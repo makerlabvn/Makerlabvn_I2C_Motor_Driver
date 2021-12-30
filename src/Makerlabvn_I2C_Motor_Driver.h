@@ -14,7 +14,7 @@
 #define MAX_I2C_MOTOR_DC_SIZE (2)
 #define MAX_I2C_MOTOR_RC_SIZE (2)
 
-#define DELAY_I2C_SEND (12) //us
+#define DELAY_I2C_SEND (15) //us
 
 #define MAKERLABVN_I2C_DRIVER_INDEX_MA (0)
 #define MAKERLABVN_I2C_DRIVER_INDEX_MB (1)

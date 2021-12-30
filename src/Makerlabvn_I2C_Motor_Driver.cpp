@@ -122,6 +122,7 @@ void Makerlabvn_I2C_Motor_Driver::sendI2cMotorDC_Data(str_serial_data_dcMotor *_
 void Makerlabvn_I2C_Motor_Driver::sendI2cMotorRC_Data(str_serial_data_rcMotor *_myMotor2_)
 {
   str_serial_data_rcMotor *_myMotor_ = (str_serial_data_rcMotor *)_myMotor2_;
+  // ReadI2cOverSerial();
   delayMicroseconds(DELAY_I2C_SEND);
   Wire.beginTransmission(addressDriver); // transmit to device #8
   Wire.write(_myMotor_->addressId);      // sends one byte
@@ -135,6 +136,7 @@ void Makerlabvn_I2C_Motor_Driver::sendI2cMotorRC_Data(str_serial_data_rcMotor *_
 
 void Makerlabvn_I2C_Motor_Driver::sendI2cAddress_Data(uint8_t _address_, str_serial_data_dcMotor *_myMotor_)
 {
+  // ReadI2cOverSerial();
   delayMicroseconds(DELAY_I2C_SEND);
   Wire.beginTransmission(_address_); // transmit to device #8
   Wire.write(_myMotor_->addressId);  // sends one byte
@@ -149,7 +151,7 @@ void Makerlabvn_I2C_Motor_Driver::sendI2cAddress_Data(uint8_t _address_, str_ser
 I2C_Driver_Error_Code Makerlabvn_I2C_Motor_Driver::ReadI2cOverSerial()
 {
   I2C_Driver_Error_Code tempStatus = I2C_MOTOR_DRIVER_CODE_FAIL;
-  delay(100);
+  delay(DELAY_I2C_SEND);
   Wire.requestFrom(addressDriver, 1); // request 6 bytes from slave device #8
   while (Wire.available())
   {                                // slave may send less than requested
