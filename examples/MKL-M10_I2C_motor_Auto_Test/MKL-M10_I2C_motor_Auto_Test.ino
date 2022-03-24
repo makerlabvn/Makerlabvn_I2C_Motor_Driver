@@ -39,8 +39,9 @@ void loop()
         Serial.print("angleRCValue: " + String(angleRCValue) + "\r\n");
     }
 
-    myDriver.writeS1(angleRCValue);
     myDriver.writeS2(180 - angleRCValue);
+    myDriver.writeS1(angleRCValue);
+    
     myDriver.MA(dirDCMotor, speedDCMotor);
     myDriver.MB(dirDCMotor, speedDCMotor);
     delay(1);
