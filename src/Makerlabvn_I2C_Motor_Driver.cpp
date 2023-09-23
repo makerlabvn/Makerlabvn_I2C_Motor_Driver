@@ -156,7 +156,7 @@ I2C_Driver_Error_Code Makerlabvn_I2C_Motor_Driver::ReadI2cOverSerial()
 {
   I2C_Driver_Error_Code tempStatus = I2C_MOTOR_DRIVER_CODE_FAIL;
   delay(DELAY_I2C_SEND);
-  Wire.requestFrom(addressDriver, 1); // request 6 bytes from slave device #8
+  Wire.requestFrom(addressDriver, 6); // request 6 bytes from slave device #8
   while (Wire.available())
   {                                // slave may send less than requested
     unsigned char c = Wire.read(); // receive a byte as character
