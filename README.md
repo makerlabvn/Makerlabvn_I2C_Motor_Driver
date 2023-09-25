@@ -46,10 +46,10 @@ void Makerlabvn_I2C_Motor_Driver::sendI2cMotorDC_Data(str_serial_data_dcMotor *_
 #### [CHECKSUM_LOWBYTE] = [ADDRESS_ID] + [MODE_ID] + [INDEX] + [PULSE_HIGH_BYTE] + [PULSE_LOW_BYTE] 
 ```c++
 // ex: Driver ADDRESS 0x64, Servo S1 run with pulse 1400:
-[0x64, 0, 0, 0x05, 0x78, 0xE1]
+[0x64, 0, 1, 0x05, 0x78, 0xE2]
 
 // ex: Driver ADDRESS 0x64, Servo S2 run with pulse 1000:
-[0x64, 0, 1, 0x03, 0xE8, 0x50]
+[0x64, 0, 2, 0x03, 0xE8, 0x51]
 ```
 
 ### Set Address:
