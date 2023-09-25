@@ -39,8 +39,8 @@ void Makerlabvn_I2C_Motor_Driver::sendI2cMotorDC_Data(str_serial_data_dcMotor *_
 #### [ADDRESS_ID]:  0x64,0x65, ..., 0x68
 #### [MODE_ID]: 0
 #### [INDEX]:
-* 0: Set S1
-* 1: Set S2
+* 1: Set S1
+* 2: Set S2
 #### [PULSE_HIGH_BYTE]: 0x00 -> 0x0A
 #### [PULSE_LOW_BYTE]: 0x00-> 0xFF
 #### [CHECKSUM_LOWBYTE] = [ADDRESS_ID] + [MODE_ID] + [INDEX] + [PULSE_HIGH_BYTE] + [PULSE_LOW_BYTE] 
